@@ -1,29 +1,17 @@
 
-//import org.apache.logging.log4j.Level
-//import org.apache.logging.log4j.LogManager
-//import groovy.util.logging.Slf4j
+
 import groovy.util.logging.Log4j2
 import org.apache.logging.log4j.Level
-
-//import org.slf4j.*
-//import org.slf4j.Logger
-//import org.slf4j.LoggerFactory
-//import groovy.util.logging.Slf4j.Slf4jLoggingStrategy
 
 @Log4j2
 class TagAnonymiser {
 
     def anoynymise(){
-        //log.debugEnabled = true
         def txt_msgs = []
         def key_map = [:]
         def value_map = [:]
 
-        //def log = LogManager.getLogger("")
-        //Logger log = LoggerFactory.getLogger("")
         log.level = Level.INFO
-
-        log.info "Hello"
 
         txt_msgs << [ "name": "Richard", "account": "abc123" ]
         txt_msgs << [ "name": "Imad", "account": "efg456" ]
@@ -66,7 +54,6 @@ class TagAnonymiser {
         }
 
         log.info txt_msgs.toString ( )
-
         assert txt_msgs == test_msgs
     }
 }
